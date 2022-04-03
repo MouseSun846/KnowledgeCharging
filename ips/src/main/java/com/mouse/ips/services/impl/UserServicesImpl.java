@@ -22,7 +22,9 @@ public class UserServicesImpl implements UserServices {
 
     @Override
     public PageInfo<User> listUserByName(UserQuery userQuery) {
+        // 设置分页
         PageHelper.startPage(userQuery.getPageNum(),userQuery.getPageSize());
+
         return new PageInfo<User>(userDao.listUserByName(userQuery));
     }
 }
