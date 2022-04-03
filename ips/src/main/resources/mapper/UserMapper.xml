@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mouse.ips.dao.UserDao">
+    <select id="listUser" resultType="com.mouse.ips.pojo.User">
+        select * from ips.user;
+    </select>
+    <select id="listUserByName" parameterType="com.mouse.ips.pojo.query.UserQuery" resultType="com.mouse.ips.pojo.User">
+        select * from ips.user
+        <where>
+            <if test="name != null and name != ''">
+                and `name` like concat('%',#{name},'%')
+            </if>
+        </where>
+    </select>
+</mapper>
