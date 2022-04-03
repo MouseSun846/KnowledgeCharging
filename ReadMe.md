@@ -279,6 +279,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 ```
 
+
+
+## 参考资料
+
+[PageHelpDoc](https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md)
+
 # FAQ
 
 ## 1.启动报错
